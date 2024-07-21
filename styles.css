@@ -1,0 +1,188 @@
+/* body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 600px;
+}
+
+.top-bar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.question-box {
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.fruit-image {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.letters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.letter {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 5px;
+    border-radius: 10px;
+    border: 3.5px solid #000000;
+    position: relative;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+    position: relative;
+}
+
+.container {
+    text-align: center;
+    background-color: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    width: 600px;
+}
+
+.top-bar {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.question-box {
+    background-color: #e0e0e0;
+    border-radius: 30px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.fruit-image {
+    width: 200px;
+    margin-bottom: 20px;
+}
+
+.letters {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.letter {
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    text-align: center;
+    margin: 0 5px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    position: relative;
+}
+
+.letter::before {
+    content: attr(data-letter);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(0, 0, 0, 0.2);
+    /* Translucent color */
+    pointer-events: none;
+    /* Ensure the pseudo-element doesn't interfere with input */
+}
+
+.message {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.correct {
+    color: green;
+    animation: fadeIn 1s;
+}
+
+.incorrect {
+    color: red;
+    animation: fadeIn 1s;
+}
+
+.completion-message {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 36px;
+    font-weight: bold;
+    color: green;
+    animation: fadeIn 2s;
+}
